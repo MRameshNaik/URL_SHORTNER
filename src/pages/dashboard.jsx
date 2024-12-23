@@ -1,4 +1,4 @@
-// can add sonner from shadcn ui after link created
+ // can add sonner from shadcn ui after link created
 
 import {useEffect, useState} from "react";
 import {BarLoader} from "react-spinners";
@@ -33,9 +33,13 @@ const Dashboard = () => {
     fnUrls();
   }, []);
 
+  // const filteredUrls = urls?.filter((url) =>
+  //   url.title.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
   const filteredUrls = urls?.filter((url) =>
-    url.title.toLowerCase().includes(searchQuery.toLowerCase())
+  url?.title?.toLowerCase().includes(searchQuery?.toLowerCase() || "")
   );
+
 
   useEffect(() => {
     if (urls?.length) fnClicks();

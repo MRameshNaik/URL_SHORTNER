@@ -38,12 +38,12 @@ const LinkCard = ({url = [], fetchUrls}) => {
       <Link to={`/link/${url?.id}`} className="flex flex-col flex-1">
         <span className="text-3xl font-extrabold hover:underline cursor-pointer">
           {url?.title}
-        </span>
+        </span> 
         <span className="text-2xl text-blue-400 font-bold hover:underline cursor-pointer">
           https://trimrr.in/{url?.custom_url ? url?.custom_url : url.short_url}
         </span>
         <span className="flex items-center gap-1 hover:underline cursor-pointer">
-          <LinkIcon className="p-1" />
+          <LinkIcon className="p-0.8" />
           {url?.original_url}
         </span>
         <span className="flex items-end font-extralight text-sm flex-1">
